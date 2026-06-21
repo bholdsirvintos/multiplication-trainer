@@ -15,6 +15,7 @@ const state = {
 // ===========================
 const STORAGE_KEYS = {
     HISTORY: 'multiplicationHistory',
+    THEME: 'selectedTheme',
 };
 
 // ===========================
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadHistory();
     updateStatistics();
     updateSessionStats();
+    setupThemeSelector();
 });
 
 function initializeApp() {
@@ -33,6 +35,8 @@ function initializeApp() {
     updateSessionStats();
     // Show initial state with Generate button
     showInitialState();
+    // Load saved theme
+    loadSavedTheme();
 }
 
 function setupEventListeners() {
@@ -50,6 +54,84 @@ function setupEventListeners() {
     document.getElementById('clearHistoryBtn').addEventListener('click', clearAllData);
 
     document.getElementById('answerInput').focus();
+}
+
+// ===========================
+// THEME SYSTEM
+// ===========================
+const THEMES = {
+    vaporwave: {
+        name: 'vaporwave',
+        color: 'linear-gradient(135deg, #c2c2ff, #8b8bff)'
+    },
+    frozen_llama: {
+        name: 'frozen_llama',
+        color: 'linear-gradient(135deg, #5dd9c1, #2dbea8)'
+    },
+    strawberry: {
+        name: 'strawberry',
+        color: 'linear-gradient(135deg, #ff6b7a, #ff4757)'
+    },
+    creamsicle: {
+        name: 'creamsicle',
+        color: 'linear-gradient(135deg, #ffb366, #ff9f43)'
+    },
+    lavender: {
+        name: 'lavender',
+        color: 'linear-gradient(135deg, #b19cd9, #9d6ba8)'
+    },
+    peaches: {
+        name: 'peaches',
+        color: 'linear-gradient(135deg, #ffb088, #ff8f5e)'
+    },
+    mint: {
+        name: 'mint',
+        color: 'linear-gradient(135deg, #98ff98, #7ae97a)'
+    },
+    pink_lemonade: {
+        name: 'pink_lemonade',
+        color: 'linear-gradient(135deg, #ff69b4, #ff1493)'
+    },
+    tiramisu: {
+        name: 'tiramisu',
+        color: 'linear-gradient(135deg, #d4a574, #c8925f)'
+    },
+    mizu: {
+        name: 'mizu',
+        color: 'linear-gradient(135deg, #98bfe8, #6fa3d1)'
+    }
+};
+
+function setupThemeSelector() {
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const theme = btn.dataset.theme;
+            if (theme) {
+                setTheme(theme);
+            }
+        });
+    });
+}
+
+function setTheme(themeName) {
+    // Set the data-theme attribute on root
+    document.documentElement.setAttribute('data-theme', themeName);
+    
+    // Save to localStorage
+    localStorage.setItem(STORAGE_KEYS.THEME, themeName);
+    
+    // Update active button
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.theme === themeName) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+function loadSavedTheme() {
+    const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME) || 'vaporwave';
+    setTheme(savedTheme);
 }
 
 // ===========================
