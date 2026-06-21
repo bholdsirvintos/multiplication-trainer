@@ -23,116 +23,117 @@
     --transition: all 0.3s ease;
 }
 
-/* Theme Variants - New vibrant colors with theme-specific backgrounds */
+/* Theme Variants - Solid colors with subtle background gradients */
 :root[data-theme="yellowstone"] {
     --primary-color: #F4D03F;
-    --primary-dark: #F39C12;
-    --primary-light: #F8D563;
+    --primary-dark: #D4AF37;
+    --primary-light: #F4D03F;
     --bg-primary: #3d3410;
-    --bg-secondary: #544620;
-    --bg-tertiary: #6b5a30;
+    --bg-secondary: #4a3f1a;
+    --bg-tertiary: #574a24;
 }
 
 :root[data-theme="terminal"] {
     --primary-color: #00FF00;
     --primary-dark: #00CC00;
-    --primary-light: #33FF33;
+    --primary-light: #00FF00;
     --bg-primary: #0a0a0a;
-    --bg-secondary: #1a1a1a;
-    --bg-tertiary: #262626;
+    --bg-secondary: #151515;
+    --bg-tertiary: #202020;
     --text-primary: #00FF00;
     --text-secondary: #00DD00;
     --text-tertiary: #00AA00;
+    --border-color: #00FF00;
 }
 
 :root[data-theme="vaporwave"] {
     --primary-color: #c2c2ff;
-    --primary-dark: #8b8bff;
-    --primary-light: #e0bfff;
+    --primary-dark: #9a9ace;
+    --primary-light: #c2c2ff;
     --bg-primary: #1a0f2e;
-    --bg-secondary: #2d1b47;
-    --bg-tertiary: #3d2b57;
+    --bg-secondary: #221339;
+    --bg-tertiary: #2a1744;
 }
 
 :root[data-theme="frozen_llama"] {
     --primary-color: #5dd9c1;
-    --primary-dark: #2dbea8;
-    --primary-light: #7ce8d4;
+    --primary-dark: #4ab399;
+    --primary-light: #5dd9c1;
     --bg-primary: #0f2b2a;
-    --bg-secondary: #1a3f3d;
-    --bg-tertiary: #2a5250;
+    --bg-secondary: #1a3a39;
+    --bg-tertiary: #254948;
 }
 
 :root[data-theme="strawberry"] {
     --primary-color: #ff6b7a;
-    --primary-dark: #ff4757;
-    --primary-light: #ff8a94;
+    --primary-dark: #cc5560;
+    --primary-light: #ff6b7a;
     --bg-primary: #3d0f12;
-    --bg-secondary: #571a1e;
-    --bg-tertiary: #6d2b2e;
+    --bg-secondary: #4d151a;
+    --bg-tertiary: #5d2128;
 }
 
 :root[data-theme="creamsicle"] {
     --primary-color: #ffb366;
-    --primary-dark: #ff9f43;
-    --primary-light: #ffc399;
+    --primary-dark: #cc8f52;
+    --primary-light: #ffb366;
     --bg-primary: #3d2410;
-    --bg-secondary: #53321a;
-    --bg-tertiary: #6b3f28;
+    --bg-secondary: #4d2f18;
+    --bg-tertiary: #5d3a20;
 }
 
 :root[data-theme="lavender"] {
     --primary-color: #b19cd9;
-    --primary-dark: #9d6ba8;
-    --primary-light: #c9b4e0;
+    --primary-dark: #8a77aa;
+    --primary-light: #b19cd9;
     --bg-primary: #2e1a40;
-    --bg-secondary: #422857;
-    --bg-tertiary: #54356b;
+    --bg-secondary: #3a2550;
+    --bg-tertiary: #463060;
 }
 
 :root[data-theme="peaches"] {
     --primary-color: #ffb088;
-    --primary-dark: #ff8f5e;
-    --primary-light: #ffc4a3;
+    --primary-dark: #cc8d6b;
+    --primary-light: #ffb088;
     --bg-primary: #3d2415;
-    --bg-secondary: #56341f;
-    --bg-tertiary: #6d4229;
+    --bg-secondary: #4d2f1f;
+    --bg-tertiary: #5d3a29;
 }
 
 :root[data-theme="mint"] {
     --primary-color: #98ff98;
-    --primary-dark: #7ae97a;
-    --primary-light: #b4ffb4;
+    --primary-dark: #77cc77;
+    --primary-light: #98ff98;
     --bg-primary: #0f3d0f;
-    --bg-secondary: #1a5a1a;
-    --bg-tertiary: #2a6d2a;
+    --bg-secondary: #1a4d1a;
+    --bg-tertiary: #255c25;
 }
 
 :root[data-theme="pink_lemonade"] {
     --primary-color: #ff69b4;
-    --primary-dark: #ff1493;
-    --primary-light: #ff85c1;
+    --primary-dark: #cc5590;
+    --primary-light: #ff69b4;
     --bg-primary: #3d0f2e;
-    --bg-secondary: #571a47;
-    --bg-tertiary: #6d2b5e;
+    --bg-secondary: #4d1a3d;
+    --bg-tertiary: #5d254c;
 }
 
 :root[data-theme="tiramisu"] {
     --primary-color: #d4a574;
-    --primary-dark: #c8925f;
-    --primary-light: #ddb892;
+    --primary-dark: #aa845d;
+    --primary-light: #d4a574;
     --bg-primary: #2d2015;
-    --bg-secondary: #3f2d1f;
-    --bg-tertiary: #533d2a;
+    --bg-secondary: #3a2a1f;
+    --bg-tertiary: #473429;
 }
 
 :root[data-theme="mizu"] {
     --primary-color: #98bfe8;
-    --primary-dark: #6fa3d1;
-    --primary-light: #b5d4f5;
+    --primary-dark: #7799bb;
+    --primary-light: #98bfe8;
     --bg-primary: #0f2540;
-    --bg-secondary: #1a3557;
-    --bg-tertiary: #2a456d;
+    --bg-secondary: #1a3555;
+    --bg-tertiary: #254570;
 }
 
 /* ===========================
@@ -150,7 +151,7 @@ html {
 
 body {
     font-family: 'JetBrains Mono', monospace;
-    background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1f3a 100%);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, rgba(26, 31, 58, 0.3) 100%);
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
@@ -177,10 +178,7 @@ header {
 header h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--primary-light), #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-light);
     margin-bottom: 0.5rem;
 }
 
@@ -361,7 +359,7 @@ header h1 {
     padding: 1rem 2rem;
     border: none;
     border-radius: 0.75rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    background: var(--primary-color);
     color: white;
     font-size: 1rem;
     font-weight: 600;
@@ -374,6 +372,7 @@ header h1 {
 .submit-btn:hover:not(:disabled),
 .primary-btn:hover:not(:disabled) {
     transform: translateY(-2px);
+    background: var(--primary-dark);
     box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
 }
 
@@ -503,10 +502,7 @@ header h1 {
 .learn-container h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    background: linear-gradient(135deg, var(--primary-light), #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-light);
 }
 
 .method {
@@ -638,10 +634,7 @@ header h1 {
 .statistics-container h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    background: linear-gradient(135deg, var(--primary-light), #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-light);
 }
 
 .stats-summary {
@@ -811,10 +804,7 @@ header h1 {
 .settings-container h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    background: linear-gradient(135deg, var(--primary-light), #a78bfa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-light);
 }
 
 .settings-section {
