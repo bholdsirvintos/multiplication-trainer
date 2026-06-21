@@ -229,6 +229,11 @@ function submitAnswer() {
         };
 
         saveToHistory(solve);
+
+        // Disable input and submit, enable next problem button
+        document.getElementById('answerInput').disabled = true;
+        document.getElementById('submitBtn').disabled = true;
+        document.getElementById('newProblemBtn').disabled = false;
     }
 }
 
