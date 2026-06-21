@@ -24,6 +24,27 @@
 }
 
 /* Theme Variants - New vibrant colors with theme-specific backgrounds */
+:root[data-theme="yellowstone"] {
+    --primary-color: #F4D03F;
+    --primary-dark: #F39C12;
+    --primary-light: #F8D563;
+    --bg-primary: #3d3410;
+    --bg-secondary: #544620;
+    --bg-tertiary: #6b5a30;
+}
+
+:root[data-theme="terminal"] {
+    --primary-color: #00FF00;
+    --primary-dark: #00CC00;
+    --primary-light: #33FF33;
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #262626;
+    --text-primary: #00FF00;
+    --text-secondary: #00DD00;
+    --text-tertiary: #00AA00;
+}
+
 :root[data-theme="vaporwave"] {
     --primary-color: #c2c2ff;
     --primary-dark: #8b8bff;
@@ -1000,30 +1021,55 @@ header h1 {
 
     .question {
         font-size: 1.5rem;
-        min-width: 2rem;
     }
 
     .timer {
         font-size: 1.5rem;
     }
 
-    .input-section {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
     .answer-input {
-        min-width: auto;
-    }
-
-    .button-group {
-        flex-direction: column;
+        font-size: 1rem;
+        min-width: 150px;
     }
 
     .submit-btn,
-    .primary-btn,
-    .secondary-btn {
-        width: 100%;
+    .primary-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .theme-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+
+    .settings-section h3 {
+        font-size: 1.1rem;
+    }
+
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .problem {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .submit-btn,
+    .primary-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
     }
 
     .stats-row {
@@ -1031,10 +1077,20 @@ header h1 {
     }
 
     .theme-grid {
-        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        gap: 0.75rem;
     }
 
-    .charts-container {
-        grid-template-columns: 1fr;
+    .theme-btn {
+        padding: 0.75rem;
+    }
+
+    .theme-preview {
+        width: 50px;
+        height: 50px;
+    }
+
+    .theme-name {
+        font-size: 0.75rem;
     }
 }
