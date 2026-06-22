@@ -179,7 +179,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -188,7 +188,7 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* ===========================
@@ -372,6 +372,17 @@ header h1 {
     font-family: 'JetBrains Mono', monospace;
 }
 
+/* Remove spinner arrows from number input */
+.answer-input::-webkit-outer-spin-button,
+.answer-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.answer-input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .answer-input:hover:not(:disabled) {
     border-color: var(--text-primary);
 }
@@ -533,6 +544,8 @@ header h1 {
     background: var(--bg-secondary);
     border-radius: 1rem;
     border: 1px solid var(--text-primary);
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .learn-container h2 {
@@ -665,6 +678,8 @@ header h1 {
     background: var(--bg-secondary);
     border-radius: 1rem;
     border: 1px solid var(--text-primary);
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .statistics-container h2 {
@@ -790,7 +805,7 @@ header h1 {
 }
 
 .history-table-wrapper {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .history-table {
@@ -836,6 +851,8 @@ header h1 {
     background: var(--bg-secondary);
     border-radius: 1rem;
     border: 1px solid var(--text-primary);
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .settings-container h2 {
