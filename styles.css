@@ -483,6 +483,7 @@ header h1 {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: -40px;
 }
 
 /* ===========================
@@ -520,6 +521,7 @@ header h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
+    margin-top: -40px;
 }
 
 .stat {
@@ -1004,17 +1006,15 @@ header h1 {
 
 .toggle-input:checked + .toggle-switch {
     background: var(--text-primary);
-    border-color: var(--text-primary);
 }
 
 .toggle-input:checked + .toggle-switch::after {
-    left: 26px;
+    transform: translateX(22px);
     background: var(--bg-primary);
 }
 
 .toggle-text {
     color: var(--text-secondary);
-    font-weight: 500;
     font-family: 'JetBrains Mono', monospace;
 }
 
@@ -1024,16 +1024,7 @@ header h1 {
 @keyframes fadeIn {
     from {
         opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
@@ -1041,13 +1032,154 @@ header h1 {
     }
 }
 
-@keyframes slideIn {
+@keyframes fadeInDown {
     from {
         opacity: 0;
-        transform: translateX(-20px);
+        transform: translateY(-10px);
     }
     to {
-        opacity: 0;
-        transform: translateX(0);
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+    RESPONSIVE DESIGN
+    =========================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .problem {
+        gap: 1rem;
+        font-size: 2rem;
+        padding: 1.5rem;
+    }
+
+    .number {
+        min-width: 4rem;
+    }
+
+    .operator,
+    .equals {
+        font-size: 1.8rem;
+    }
+
+    .question {
+        font-size: 1.8rem;
+        min-width: 2rem;
+    }
+
+    .timer {
+        font-size: 1.5rem;
+    }
+
+    .answer-input {
+        min-width: 160px;
+        font-size: 1rem;
+        padding: 0.75rem;
+    }
+
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+
+    .tabs {
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .practice-container {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .submit-btn {
+        width: 100%;
+    }
+
+    .secondary-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .problem {
+        gap: 0.75rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .number {
+        min-width: 3rem;
+    }
+
+    .operator,
+    .equals {
+        font-size: 1.3rem;
+    }
+
+    .question {
+        font-size: 1.3rem;
+    }
+
+    .timer {
+        font-size: 1.2rem;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    .answer-input {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .tab-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .tab-icon {
+        font-size: 1rem;
+    }
+
+    .practice-container {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .learn-container,
+    .statistics-container,
+    .settings-container {
+        padding: 1rem;
     }
 }
